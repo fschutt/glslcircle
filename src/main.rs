@@ -1,7 +1,7 @@
 #[macro_use]
 extern crate glium;
 
-use glium::{Display, Program, Frame};
+use glium::{Display, Program};
 use glium::glutin::{self, Event, WindowEvent, ControlFlow};
 
 pub const CIRCLE_VERTEX_SHADER: &str = include_str!("circle.vert");
@@ -50,7 +50,7 @@ struct VertexPoint {
 implement_vertex!(VertexPoint, x, y);
 
 fn draw_circles(display: &Display, shader: &Program) {
-	use glium::{VertexBuffer, IndexBuffer};
+	use glium::{VertexBuffer};
 	use glium::draw_parameters::DrawParameters;
 	use glium::Surface;
 	use glium::index::PrimitiveType;
